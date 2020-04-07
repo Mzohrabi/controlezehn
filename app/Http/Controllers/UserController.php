@@ -22,7 +22,6 @@ class UserController extends Controller
                 'message' => 'Unauthorized'
             ], $this->statusError);
         }
-
         $user = Auth::user();
         $tokenResult = $user->createToken('Personal Access Token');
         $token = $tokenResult->token;
