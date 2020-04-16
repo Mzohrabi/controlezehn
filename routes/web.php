@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::namespace("Admin")->prefix("admin")->group(function(){
+    Route::get('/login',"LoginController@loginForm");
+});
 
 Route::get('/', function () {
     return view('welcome');
