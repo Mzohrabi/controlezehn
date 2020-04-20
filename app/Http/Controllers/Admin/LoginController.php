@@ -19,10 +19,9 @@ class LoginController extends Controller
         return json_encode(Auth::guard('web')->user());
     }
     public function login(Request $request){
-        Auth::logout();
         $credentials = $request->only('mobile', 'password');
         if(Auth::guard('web')->attempt($credentials)){
-            return redirect(route('get_user'));
+            return redirect(route('dashboard'));
         }else{
             view('admin.auth.__index');
         }
