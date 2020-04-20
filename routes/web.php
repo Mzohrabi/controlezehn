@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::namespace("Admin")->prefix("admin")->group(function(){
-    Route::get('/login',"LoginController@loginForm");
+    Route::get('/login',"LoginController@loginForm")->name('login_form');
+    Route::middleware(["web"])->group(function(){
+        Route::get('/user',"LoginController@getUser")->name('get_user');
+    });
+
+    Route::post('login', "LoginController@login")->name('login');
 });
 
 Route::get('/', function () {
