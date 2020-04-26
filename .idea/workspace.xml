@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/ControleZehn/Utilities.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiofileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClipController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CourseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DailyprayController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LectureController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MagicboxController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PhotowritenController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TrainingpostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/View/Composers/NavigationComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/ViewComposerServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/zehnebartar.vpp.bak_005d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/dashboard/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/.zehnebartar.vpp.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/zehnebartar.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/db/zehnebartar.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +42,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="controlezehn" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,6 +181,8 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/morilog/jalali" />
+      <path value="$PROJECT_DIR$/vendor/beberlei/assert" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aAk6LklC7EPJQ45Jp5gRoR70xW" />
@@ -166,6 +197,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\learning\laravel\controlezehn\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\learning\laravel\controlezehn\resources\lang\fa" />
       <recent name="E:\learning\laravel\controlezehn\resources\lang\en" />
@@ -208,7 +242,11 @@
       <workItem from="1587023514641" duration="3324000" />
       <workItem from="1587306360917" duration="8860000" />
       <workItem from="1587376839194" duration="18000" />
-      <workItem from="1587386730186" duration="240000" />
+      <workItem from="1587386730186" duration="5653000" />
+      <workItem from="1587401892450" duration="27000" />
+      <workItem from="1587453558399" duration="5101000" />
+      <workItem from="1587584646109" duration="6799000" />
+      <workItem from="1587692951399" duration="2757000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -259,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587386782303</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix redirection">
+      <created>1587386985635</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587386985635</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +333,7 @@
     <MESSAGE value="Init Theme" />
     <MESSAGE value="Fixed Gate" />
     <MESSAGE value="Front -&gt; Login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front -&gt; Login page" />
+    <MESSAGE value="Fix redirection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix redirection" />
   </component>
 </project>

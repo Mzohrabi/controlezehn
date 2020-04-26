@@ -21,9 +21,9 @@ class LoginController extends Controller
     public function login(Request $request){
         $credentials = $request->only('mobile', 'password');
         if(Auth::guard('web')->attempt($credentials)){
-            return redirect(route('dashboard'));
+            return redirect(route('admin.dashboard'));
         }else{
-            view('admin.auth.__index');
+            return view('admin.auth.__index');
         }
 
 

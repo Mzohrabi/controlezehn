@@ -16,6 +16,7 @@
         "laravel/passport": "^8.4",
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.1",
+        "morilog/jalali": "3.*",
         "spatie/laravel-medialibrary": "^7.0.0",
         "spatie/laravel-permission": "^3.11"
     },
@@ -43,7 +44,8 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/ControleZehn"
         ]
     },
     "autoload-dev": {

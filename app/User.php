@@ -37,4 +37,8 @@ class User extends Authenticatable
      */
     protected $casts = [
     ];
+
+    public function getFullnameAttribute(){
+        return"{$this->fname} {$this->lname}";
+    }
 }
