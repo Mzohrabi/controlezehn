@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/.zehnebartar.vpp.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/gentella/build/js/controlezehn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/fa/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +31,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="controlezehn" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,6 +176,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/vendor/morilog/jalali" />
       <path value="$PROJECT_DIR$/vendor/beberlei/assert" />
+      <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aAk6LklC7EPJQ45Jp5gRoR70xW" />
@@ -171,18 +187,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\learning\laravel\controlezehn\app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\learning\laravel\controlezehn\resources\views\admin\users" />
+      <recent name="E:\learning\laravel\controlezehn\db" />
       <recent name="E:\learning\laravel\controlezehn\resources\lang\fa" />
       <recent name="E:\learning\laravel\controlezehn\resources\lang\en" />
       <recent name="E:\learning\laravel\controlezehn\public\gentella" />
-      <recent name="E:\learning\laravel\controlezehn\db" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,7 +246,9 @@
       <workItem from="1587934130317" duration="197000" />
       <workItem from="1587935711129" duration="66000" />
       <workItem from="1588054407873" duration="3156000" />
-      <workItem from="1588057776299" duration="19000" />
+      <workItem from="1588057776299" duration="228000" />
+      <workItem from="1588541155051" duration="11612000" />
+      <workItem from="1588703099779" duration="988000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -293,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587934324249</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Start Users Section">
+      <created>1588057875780</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588057875780</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add database">
+      <created>1588057977934</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588057977934</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +358,8 @@
     <MESSAGE value="Front -&gt; Login page" />
     <MESSAGE value="Fix redirection" />
     <MESSAGE value="Add Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Controllers" />
+    <MESSAGE value="Start Users Section" />
+    <MESSAGE value="add database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add database" />
   </component>
 </project>

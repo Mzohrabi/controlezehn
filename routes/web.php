@@ -25,10 +25,11 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
         Route::get('/', "UserController@index")->name('admin.users');
         Route::get('/all', "UserController@index")->name('admin.users.all');
         Route::get('/create', "UserController@create")->name('admin.users.create');
-        Route::get('/edit/{id}', "UserController@edit")->name('admin.users.edit');
-        Route::get('/show/{id}', "UserController@show")->name('admin.users.show');
-        Route::get('/update/{id}', "UserController@update")->name('admin.users.update');
-        Route::get('/delete/{id}', "UserController@delete")->name('admin.users.delete');
+        Route::post('/store', "UserController@store")->name('admin.users.store');
+        Route::get('/{id}/edit', "UserController@edit")->name('admin.users.edit');
+        Route::get('/{id}/show', "UserController@show")->name('admin.users.show');
+        Route::post('/{id}/update', "UserController@update")->name('admin.users.update');
+        Route::post('/{id}/delete', "UserController@delete")->name('admin.users.delete');
 
     });
 
