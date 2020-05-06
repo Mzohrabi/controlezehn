@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/.zehnebartar.vpp.lck" afterDir="false" />
+    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="Complete User Section">
+      <change afterPath="$PROJECT_DIR$/app/AudioBook.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/AudioFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Clip.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Course.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DailyPray.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exercise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Lecture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/MagicBox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/PhotoWritten.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/TrainingPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_103018_create_photo_writtens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_103157_create_clips_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104052_create_audio_files_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104247_create_training_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104323_create_courses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104349_create_lectures_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104409_create_audio_books_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104424_create_magic_boxes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104501_create_daily_prays_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104525_create_exercises_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104620_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/zehnebartar.vpp.bak_006d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/.zehnebartar.vpp.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/controlezehn.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/controlezehn.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/zehnebartar.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/db/zehnebartar.vpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,20 +200,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\learning\laravel\controlezehn\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\learning\laravel\controlezehn\db" />
       <recent name="F:\learning\laravel\controlezehn\resources\views\admin\users" />
       <recent name="E:\learning\laravel\controlezehn\db" />
       <recent name="E:\learning\laravel\controlezehn\resources\lang\fa" />
       <recent name="E:\learning\laravel\controlezehn\resources\lang\en" />
-      <recent name="E:\learning\laravel\controlezehn\public\gentella" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\learning\laravel\controlezehn\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,7 +262,7 @@
       <workItem from="1588057776299" duration="228000" />
       <workItem from="1588541155051" duration="11612000" />
       <workItem from="1588703099779" duration="1792000" />
-      <workItem from="1588757378999" duration="1066000" />
+      <workItem from="1588757378999" duration="3637000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -325,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588704498339</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Complete User Section">
+      <created>1588758555568</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588758555568</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

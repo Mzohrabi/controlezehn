@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 28, 2020 at 07:12 AM
+-- Generation Time: May 06, 2020 at 08:02 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `migrations`
@@ -93,7 +93,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2016_06_01_000005_create_oauth_personal_access_clients_table', 1),
 (14, '2019_08_19_000000_create_failed_jobs_table', 1),
 (15, '2020_04_15_192254_create_media_table', 2),
-(16, '2020_04_15_202954_create_permission_tables', 3);
+(16, '2020_04_15_202954_create_permission_tables', 3),
+(17, '2020_05_06_093400_create_products_table', 4);
 
 -- --------------------------------------------------------
 
@@ -270,6 +271,29 @@ CREATE TABLE IF NOT EXISTS `permissions` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productable_id` bigint(20) UNSIGNED NOT NULL,
+  `is_free` tinyint(4) NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rate` double(8,2) NOT NULL,
+  `is_deleted` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `products_productable_type_productable_id_index` (`productable_type`,`productable_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roles`
 --
 
@@ -323,7 +347,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_mobile_unique` (`mobile`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
