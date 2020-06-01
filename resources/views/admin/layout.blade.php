@@ -26,6 +26,7 @@
 
     <!-- Custom Theme Style -->
     <link href="{{asset('gentella/build/css/custom.min.css')}}" rel="stylesheet">
+    @stack('styles')
 </head>
 <!-- /header content -->
 <body class="nav-md">
@@ -66,7 +67,7 @@
                             </li>
                             <li class="{{ Utilities::setActiveMenu('admin/products*') }}"><a><i class="fa fa-tags"></i> محصولات <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li class="{{Utilities::setActiveSubMenu('admin/products/audiobook*')}}"><a href="{{route('admin.products.audiobook')}}">کتاب صوتی</a></li>
+                                    <li class="{{Utilities::setActiveSubMenu('admin/products/audiobooks*')}}"><a href="{{route('admin.products.audiobooks')}}">کتاب صوتی</a></li>
                                     <li class="{{ Utilities::setActiveSubMenu('admin/products/courses*')}}"><a href="{{route('admin.products.courses')}}">دوره ها</a></li>
                                     <li class="{{ Utilities::setActiveSubMenu('admin/products/lectures*')}}"><a href="{{route('admin.products.lectures')}}">سخنرانی ها</a></li>
                                 </ul>

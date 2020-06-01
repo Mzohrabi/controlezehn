@@ -38,8 +38,10 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
     });
     //Users
     Route::middleware(["auth:web"])->prefix("products")->group(function(){
-        Route::prefix("audiobook")->group(function(){
-            Route::get('/all', "UserController@index")->name('admin.products.audiobook');
+        Route::prefix("audiobooks")->group(function(){
+            Route::get('/all', "AudiobookController@index")->name('admin.products.audiobooks');
+            Route::get('/create', "AudiobookController@create")->name('admin.products.audiobooks.create');
+            Route::post('/store', "AudiobookController@store")->name('admin.products.audiobooks.store');
         });
 
         Route::prefix("courses")->group(function(){
