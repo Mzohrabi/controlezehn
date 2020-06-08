@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'auth'], function () {
         Route::post('login', 'UserController@login');
         Route::post('register', 'UserController@register');
+        Route::post('confirm', 'UserController@confirmCode');
     }
 );
 Route::group(['middleware'=>'auth:api'],function(){

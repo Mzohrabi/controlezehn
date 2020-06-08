@@ -19,23 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="Complete User Section">
-      <change afterPath="$PROJECT_DIR$/db/zehnebartar.vpp.bak_007d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/general_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/zehnebartar.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/db/zehnebartar.vpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list id="c460c1e2-8bb8-44cc-b292-2fbe0dc8b297" name="Add Sms Section" comment="Add Sms Section">
+      <change afterPath="$PROJECT_DIR$/app/Utilities/Sms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +199,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -226,18 +217,6 @@
       <recent name="E:\learning\laravel\controlezehn\app" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -250,6 +229,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="" />
+      <changelist id="c460c1e2-8bb8-44cc-b292-2fbe0dc8b297" name="Add Sms Section" comment="" />
       <created>1586185609121</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -278,6 +258,10 @@
       <workItem from="1589389387931" duration="4718000" />
       <workItem from="1589528743460" duration="6465000" />
       <workItem from="1589559912111" duration="8039000" />
+      <workItem from="1591019777581" duration="90000" />
+      <workItem from="1591098048273" duration="4781000" />
+      <workItem from="1591566977152" duration="686000" />
+      <workItem from="1591585454486" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -370,7 +354,35 @@
       <option name="project" value="LOCAL" />
       <updated>1588758555568</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Complete AudioBook Section">
+      <created>1591019837716</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591019837716</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add Sms Section">
+      <created>1591567176671</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591567176671</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fixup! Add Sms Section">
+      <created>1591585792078</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1591585792078</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add Sms Section">
+      <created>1591585829382</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591585829382</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +391,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/mzoh/public_html/controlezehn/app/Utilities" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -387,6 +424,11 @@
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -404,7 +446,10 @@
     <MESSAGE value="Start Users Section" />
     <MESSAGE value="add database" />
     <MESSAGE value="Complete User Section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete User Section" />
+    <MESSAGE value="Complete AudioBook Section" />
+    <MESSAGE value="fixup! Add Sms Section" />
+    <MESSAGE value="Add Sms Section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Sms Section" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1589307387115">
@@ -415,9 +460,25 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="705" y="355" width="555" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589306473740" />
+    <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1591585893697">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1591585893697" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1589311541318">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1589311541317" />
+    <state x="518" y="82" width="387" height="629" key="VCS.ChangeListViewerDialog" timestamp="1591585530793">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="518" y="82" width="387" height="629" key="VCS.ChangeListViewerDialog/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1591585530793" />
+    <state x="560" y="314" width="303" height="164" key="VCS.ChangelistChooser" timestamp="1591585626463">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="560" y="314" width="303" height="164" key="VCS.ChangelistChooser/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1591585626463" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591585913015">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1591585913015" />
   </component>
 </project>
