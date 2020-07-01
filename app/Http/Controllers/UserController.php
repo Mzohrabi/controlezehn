@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Utilities\SMS;
+use App\Utilities\Sms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use PHPUnit\Util\Json;
 
 class UserController extends Controller
@@ -14,9 +15,20 @@ class UserController extends Controller
     private $statusError = 401;
     //
     public function login(Request $request){
-        $request->validate([
+        $validator = Validator::make($request->all(),[
             'mobile' => 'required|digits:11'
         ]);
+
+        if ($validator->fails()) {
+
+            //pass validator errors as errors object for ajax response
+
+            return response()->json(
+                [
+                    'type'=>'error',
+                    'errors'=>$validator->errors()
+                ]);
+        }
 //        $credintials = request(['mobile']);
 //        if(!User::where($credintials)){
 //            return response()->json([
@@ -28,7 +40,7 @@ class UserController extends Controller
             $password = rand(10000,99999);
             $user->password = bcrypt($password);
             $user->save();
-            SMS::send(
+            Sms::send(
                 'رمز شما : '.$password,
                 $request->mobile
             );
@@ -39,6 +51,7 @@ class UserController extends Controller
         }else{
             return response()->json([
                 'type' => 'error',
+                'error' => 'not_found',
                 'message' => 'کاربری با این شماره موبایل در سیستم موجود نیست!'
             ]);
         }
@@ -68,12 +81,25 @@ class UserController extends Controller
     }
 
     public function register(Request $request){
-
-        $request->validate([
+        $validator = Validator::make($request->all(),[
             'fname' => 'required|string',
             'lname' => 'required|string',
             'mobile' => 'required|unique:users,mobile|digits:11',
         ]);
+
+        if ($validator->fails()) {
+
+            //pass validator errors as errors object for ajax response
+
+            return response()->json(
+                [
+                    'type'=>'error',
+                    'errors'=>$validator->errors()
+                ]);
+        }
+//        $request->validate([
+//
+//        ]);
         $user = new User([
                 'mobile' => $request->mobile,
                 'fname' => $request->fname,
