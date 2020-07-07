@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('is_free');
             $table->text('description');
             $table->float('rate');
-            $table->tinyInteger('is_deleted');
+            $table->tinyInteger('is_deleted')->default(0);
             $table->timestamps();
         });
     }

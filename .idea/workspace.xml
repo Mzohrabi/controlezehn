@@ -19,13 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="Complete User Section">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="Comlete Lo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AudioBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AudioBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/audio_books/2020_05_06_104409_create_audio_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/audio_books/2020_05_06_104409_create_audio_books_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +260,11 @@
       <workItem from="1593426029968" duration="649000" />
       <workItem from="1593531091655" duration="1336000" />
       <workItem from="1593578623178" duration="117000" />
+      <workItem from="1593579044605" duration="696000" />
+      <workItem from="1593605569463" duration="5288000" />
+      <workItem from="1593618593439" duration="1147000" />
+      <workItem from="1593628847427" duration="1650000" />
+      <workItem from="1593839322343" duration="464000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -347,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588758555568</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Comlete Lo">
+      <created>1593579122667</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1593579122667</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +397,8 @@
     <MESSAGE value="Start Users Section" />
     <MESSAGE value="add database" />
     <MESSAGE value="Complete User Section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete User Section" />
+    <MESSAGE value="Comlete Lo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comlete Lo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1593359303402">
@@ -395,10 +413,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="705" y="355" width="555" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589306473740" />
-    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog" timestamp="1593359317743">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593610296584">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593359317743" />
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593610296584" />
+    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog" timestamp="1593608710815">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593608710815" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1589311541318">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

@@ -59,10 +59,21 @@ class UserController extends Controller
     }
 
     public function confirmCode(Request $request) {
-        $request->validate([
+        $validator = Validator::make($request->all(),[
             'mobile' => 'required|digits:11',
             'password' => 'required|digits:5'
         ]);
+
+        if ($validator->fails()) {
+
+            //pass validator errors as errors object for ajax response
+
+            return response()->json(
+                [
+                    'type'=>'error',
+                    'errors'=>$validator->errors()
+                ]);
+        }
 
         $credintials = request(['mobile', 'password']);
         if(!Auth::attempt($credintials)){

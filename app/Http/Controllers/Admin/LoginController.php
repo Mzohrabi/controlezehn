@@ -23,7 +23,7 @@ class LoginController extends Controller
         if(Auth::guard('web')->attempt($credentials)){
             return redirect(route('admin.dashboard'));
         }else{
-            return view('admin.auth.__index');
+            return view('admin.auth._index');
         }
 
 

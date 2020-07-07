@@ -42,21 +42,20 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-{{--                                @foreach($users as $user)--}}
-{{--                                    <tr>--}}
-{{--                                        <td><input type="checkbox" value="{{$user->id}}" class="flat" name="table_records"></td>--}}
-{{--                                        <td>{{$user->fname}}</td>--}}
-{{--                                        <td>{{$user->lname}}</td>--}}
-{{--                                        <td>{{$user->mobile}}</td>--}}
-{{--                                        <td>{{$user->jalali_date}}</td>--}}
-{{--                                        <td>--}}
-{{--                                            <a href="{{route('admin.users.edit',$user->id)}}" class="btn btn-success">ویرایش</a>--}}
-{{--                                            <a href="#" class="btn btn-danger delete-record" data-delete-url="{{ route('admin.users.delete',$user->id) }}"--}}
-{{--                                               data-record-id="{{$user->id}}">حذف</a>--}}
-{{--                                            <a href="{{route('admin.users.delete',$user->id)}}" class="btn btn-danger">حذف</a>--}}
-{{--                                        </td>--}}
-{{--                                    </tr>--}}
-{{--                                @endforeach--}}
+                                @foreach($audiobooks as $audiobook)
+                                    <tr>
+                                        <td><input type="checkbox" value="{{$audiobook->id}}" class="flat" name="table_records"></td>
+                                        <td>{{$audiobook->product->title}}</td>
+                                        <td>{{$audiobook->product->price}}</td>
+                                        <td>{{$audiobook->product->rate}}</td>
+                                        <td>{{0}}</td>
+                                        <td>{{$audiobook->jalali_date}}</td>
+                                        <td>
+                                            <a href="{{route('admin.products.audiobooks.edit',$audiobook->id)}}" class="btn btn-success">ویرایش</a>
+                                            <a href="{{route('admin.products.audiobooks.delete',$audiobook->id)}}" class="btn btn-danger">حذف</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -42,6 +42,9 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
             Route::get('/all', "AudiobookController@index")->name('admin.products.audiobooks');
             Route::get('/create', "AudiobookController@create")->name('admin.products.audiobooks.create');
             Route::post('/store', "AudiobookController@store")->name('admin.products.audiobooks.store');
+            Route::get('/{id}/edit', "AudiobookController@edit")->name('admin.products.audiobooks.edit');
+            Route::post('/{id}/update', "AudiobookController@update")->name('admin.products.audiobooks.update');
+            Route::post('/{id}/delete', "AudiobookController@delete")->name('admin.products.audiobooks.delete');
         });
 
         Route::prefix("courses")->group(function(){

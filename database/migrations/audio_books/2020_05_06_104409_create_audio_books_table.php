@@ -15,7 +15,6 @@ class CreateAudioBooksTable extends Migration
     {
         Schema::create('audio_books', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id');
             $table->text('sound_url');
             $table->text('description');
             $table->text('image_url');
