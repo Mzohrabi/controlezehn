@@ -23,6 +23,11 @@ Route::group(['middleware'=>'auth:api'],function(){
     Route::get('logout', 'UserController@logout');
     Route::get('user', 'UserController@user');
 });
+
+Route::group(['prefix' => 'audiobooks', 'middleware'=>'auth:api'], function() {
+    Route::get('all', 'AudiobookController@all');
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

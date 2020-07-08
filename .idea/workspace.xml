@@ -19,17 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="Comlete Lo">
+    <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="temp commit">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AudiobookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AudioBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AudioBook.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/audio_books/2020_05_06_104409_create_audio_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/audio_books/2020_05_06_104409_create_audio_books_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/general_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/general_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +171,6 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/league/glide" />
-      <path value="$PROJECT_DIR$/vendor/org_heigl/ghostscript" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
@@ -186,6 +187,11 @@
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aAk6LklC7EPJQ45Jp5gRoR70xW" />
@@ -202,7 +208,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Beton1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -265,6 +271,11 @@
       <workItem from="1593618593439" duration="1147000" />
       <workItem from="1593628847427" duration="1650000" />
       <workItem from="1593839322343" duration="464000" />
+      <workItem from="1594097816801" duration="410000" />
+      <workItem from="1594127954786" duration="8289000" />
+      <workItem from="1594145357015" duration="534000" />
+      <workItem from="1594195213728" duration="637000" />
+      <workItem from="1594230620674" duration="5643000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -364,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593579122667</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="temp commit">
+      <created>1594097863761</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1594097863761</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,17 +416,18 @@
     <MESSAGE value="add database" />
     <MESSAGE value="Complete User Section" />
     <MESSAGE value="Comlete Lo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comlete Lo" />
+    <MESSAGE value="temp commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1593359303402">
+    <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1594137121492">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053@67.27.1853.1053" timestamp="1593359303402" />
-    <state x="586" y="214" width="804" height="677" key="#Options" timestamp="1593359317312">
+    <state x="588" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053@67.27.1853.1053" timestamp="1594137121492" />
+    <state x="586" y="214" width="804" height="677" key="#Options" timestamp="1594137131544">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="586" y="214" width="804" height="677" key="#Options/67.27.1853.1053@67.27.1853.1053" timestamp="1593359317312" />
+    <state x="586" y="214" width="804" height="677" key="#Options/67.27.1853.1053@67.27.1853.1053" timestamp="1594137131544" />
     <state x="705" y="355" width="555" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589306473740">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -417,17 +436,33 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593610296584" />
+    <state x="727" y="467" width="523" height="171" key="ComposerInitDialogKey" timestamp="1594129175922">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="727" y="467" width="523" height="171" key="ComposerInitDialogKey/67.27.1853.1053@67.27.1853.1053" timestamp="1594129175922" />
     <state x="167" y="125" width="1653" height="855" key="DirDiffDialog" timestamp="1593608710815">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593608710815" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594145934081">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1594145934081" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1589311541318">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1589311541317" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594097883045">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1594097883045" />
     <state x="889" y="266" key="ftp.server.browser" timestamp="1593359170714">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="889" y="266" key="ftp.server.browser/67.27.1853.1053@67.27.1853.1053" timestamp="1593359170714" />
+    <state x="858" y="446" width="260" height="212" key="publish.login" timestamp="1594231242921">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="858" y="446" width="260" height="212" key="publish.login/67.27.1853.1053@67.27.1853.1053" timestamp="1594231242921" />
   </component>
 </project>

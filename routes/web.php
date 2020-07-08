@@ -32,7 +32,6 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
         Route::post('/{id}/delete', "UserController@delete")->name('admin.users.delete');
 
     });
-
     Route::middleware(["auth:web"])->prefix("dailypray")->group(function(){
         Route::get('/', "UserController@index")->name('admin.dailypray');
     });
@@ -43,6 +42,8 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
             Route::get('/create', "AudiobookController@create")->name('admin.products.audiobooks.create');
             Route::post('/store', "AudiobookController@store")->name('admin.products.audiobooks.store');
             Route::get('/{id}/edit', "AudiobookController@edit")->name('admin.products.audiobooks.edit');
+            Route::get('/{id}/soundfile', "AudiobookController@soundfile")->name('admin.products.audiobooks.sound');
+            Route::get('/{id}/imagefile', "AudiobookController@imagefile")->name('admin.products.audiobooks.image');
             Route::post('/{id}/update', "AudiobookController@update")->name('admin.products.audiobooks.update');
             Route::post('/{id}/delete', "AudiobookController@delete")->name('admin.products.audiobooks.delete');
         });

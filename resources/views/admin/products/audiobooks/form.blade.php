@@ -8,6 +8,11 @@
         </div>
     </div>
 </div>
+@if(count($info->getMedia('sound_pics')) > 0)
+<div class="form-group">
+    <label class="control-label text-success col-md-3 col-sm-3 col-xs-12"><a href="{{route('admin.products.audiobooks.image', $info->id)}}?version={{rand(0,900000)}}">مشاهده تصویر</a></label>
+</div>
+@endif
 <div class="form-group">
     <label class="control-label col-md-3 col-sm-3 col-xs-12">فایل محصول</label>
     <div class="col-md-9 col-sm-9 col-xs-12">
@@ -18,6 +23,11 @@
         </div>
     </div>
 </div>
+@if(count($info->getMedia('sound_file')) > 0)
+<div class="form-group">
+    <label class="control-label col-md-3 col-sm-3 col-xs-12"><a href="{{route('admin.products.audiobooks.sound', $info->id)}}?version={{rand(0,900000)}}">دریافت فایل</a></label>
+</div>
+@endif
 {{--<div class="form-group">--}}
 {{--    <label for="mobile" class="control-label col-md-3 col-sm-3 col-xs-12">محصول رایگان--}}
 {{--        <span class="required">*</span>        </label>--}}
