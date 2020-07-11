@@ -20,7 +20,7 @@ class AudioBook extends Model implements HasMedia
     use HasMediaTrait;
     //
     protected $fillable = ['sound_url','description', 'image_url'];
-
+    protected $appends = ['sound_file', 'sound_image'];
     public function product(){
         return $this->morphOne('App\Product', 'productable');
     }
@@ -29,5 +29,12 @@ class AudioBook extends Model implements HasMedia
         return Jalalian::fromDateTime(new Carbon($this->created_at))->format("H:i:s y/m/d");
     }
 
+    public function getSoundFileAttribute() {
+        return route('admin.products.audiobooks.sound', $this->id);
+    }
+
+    public function getSoundImageAttribute() {
+        return route('admin.products.audiobooks.image', $this->id);
+    }
 
 }

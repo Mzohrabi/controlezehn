@@ -32,7 +32,6 @@ class AudiobookController extends Controller
         $image = $info->getMedia('sound_file')->first();
         if($image != null){
             $response = Response::download($image->getPath(),$image->file_name);
-            ob_end_clean();
             return $response;
         }else{
             return redirect()->back();
@@ -44,7 +43,6 @@ class AudiobookController extends Controller
         $image = $info->getMedia('sound_pics')->first();
         if($image != null){
             $response = Response::download($image->getPath(),$image->file_name);
-            ob_end_clean();
             return $response;
         }else{
             return redirect()->back();

@@ -65,6 +65,12 @@
                                     <li class="{{ Utilities::setActiveSubMenu('admin/users/create')}}"><a href="{{route('admin.users.create')}}">ساخت کاربر جدید</a></li>
                                 </ul>
                             </li>
+                            <li class="{{ Utilities::setActiveMenu('admin/lecturers*') }}"><a><i class="fa fa-user-circle"></i> سخنرانان <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="{{Utilities::setActiveSubMenu('admin/lecturers/all')}}"><a href="{{route('admin.lecturers.all')}}">همه سخنرانان</a></li>
+                                    <li class="{{ Utilities::setActiveSubMenu('admin/lecturers/create')}}"><a href="{{route('admin.lecturers.create')}}">ساخت سخنران جدید</a></li>
+                                </ul>
+                            </li>
                             <li class="{{ Utilities::setActiveMenu('admin/products*') }}"><a><i class="fa fa-tags"></i> محصولات <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li class="{{Utilities::setActiveSubMenu('admin/products/audiobooks*')}}"><a href="{{route('admin.products.audiobooks')}}">کتاب صوتی</a></li>

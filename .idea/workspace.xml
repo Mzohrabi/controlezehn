@@ -20,19 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="temp commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AudiobookController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LecturersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Lecturer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Utilities/Sms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_08_034417_create_lecturers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AudioBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AudioBook.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_093400_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_104349_create_lectures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104349_create_lectures_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/general_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/general_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -192,6 +197,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/org_heigl/ghostscript" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aAk6LklC7EPJQ45Jp5gRoR70xW" />
@@ -276,6 +282,8 @@
       <workItem from="1594145357015" duration="534000" />
       <workItem from="1594195213728" duration="637000" />
       <workItem from="1594230620674" duration="5643000" />
+      <workItem from="1594365474716" duration="581000" />
+      <workItem from="1594486975526" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -386,19 +394,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -420,9 +429,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="temp commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="588" y="214" width="800" height="677" key="#Deployment" timestamp="1594137121492">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="432" y="159" width="800" height="677" key="#Deployment" timestamp="1594317055573">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state x="432" y="159" key="#Deployment/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594317055573" />
     <state x="588" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053@67.27.1853.1053" timestamp="1594137121492" />
     <state x="586" y="214" width="804" height="677" key="#Options" timestamp="1594137131544">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -440,9 +450,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="727" y="467" width="523" height="171" key="ComposerInitDialogKey/67.27.1853.1053@67.27.1853.1053" timestamp="1594129175922" />
-    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog" timestamp="1593608710815">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="137" y="96" width="1159" height="602" key="DirDiffDialog" timestamp="1594317307233">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state x="137" y="96" width="1159" height="602" key="DirDiffDialog/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594317307233" />
     <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593608710815" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594145934081">
       <screen x="67" y="27" width="1853" height="1053" />
