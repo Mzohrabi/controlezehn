@@ -26,6 +26,12 @@ Route::group(['middleware'=>'auth:api'],function(){
 
 Route::group(['prefix' => 'audiobooks', 'middleware'=>'auth:api'], function() {
     Route::get('all', 'AudiobookController@all');
+    Route::get('/{id}/soundfile', "AudiobookController@soundfile")->name('api.products.audiobooks.sound');
+    Route::get('/{id}/imagefile', "AudiobookController@imagefile")->name('api.products.audiobooks.image');
+});
+
+Route::group(['prefix' => 'lecturers', 'middleware'=>'auth:api'], function() {
+    Route::get('all', 'LecturersController@all')->name('api.lecturers.all');
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

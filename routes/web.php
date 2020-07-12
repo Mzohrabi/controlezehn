@@ -32,10 +32,22 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
         Route::post('/{id}/delete', "UserController@delete")->name('admin.users.delete');
 
     });
+
+    Route::middleware(["auth:web"])->prefix("lecturers")->group(function(){
+        Route::get('/all', "LecturersController@index")->name('admin.lecturers.all');
+        Route::get('/create', "LecturersController@create")->name('admin.lecturers.create');
+        Route::post('/store', "LecturersController@store")->name('admin.lecturers.store');
+        Route::get('/{id}/edit', "LecturersController@edit")->name('admin.lecturers.edit');
+        Route::get('/{id}/show', "LecturersController@show")->name('admin.lecturers.show');
+        Route::post('/{id}/update', "LecturersController@update")->name('admin.lecturers.update');
+        Route::post('/{id}/delete', "LecturersController@delete")->name('admin.lecturers.delete');
+    });
+
     Route::middleware(["auth:web"])->prefix("dailypray")->group(function(){
         Route::get('/', "UserController@index")->name('admin.dailypray');
     });
-    //Users
+
+    //Products
     Route::middleware(["auth:web"])->prefix("products")->group(function(){
         Route::prefix("audiobooks")->group(function(){
             Route::get('/all', "AudiobookController@index")->name('admin.products.audiobooks');

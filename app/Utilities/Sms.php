@@ -4,28 +4,49 @@
 namespace App\Utilities;
 
 
-class SMS
+class Sms
 {
-    private static $username = "afshin.namavar";
-    private static $password = "gfh432";
+    private static $username = "namavar";
+    private static $password = "";
 
     public static function send($message, $mobile) {
         $url = 'http://wsapp.barinclinic.ir/api/SendSMS';
-        $data = array('LockCode' => SMS::$username, 'Key' => SMS::$password,'Message'=>$message,'MobileNo'=>$mobile);
+        $data = array('LockCode' => Sms::$username, 'Key' => Sms::$password,'Message'=>$message,'MobileNo'=>$mobile);
 
-// use key 'http' even if you send the request to https://...
-        $options = array(
-            'http' => array(
-                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method'  => 'POST',
-                'content' => http_build_query($data)
-            )
+        $postRequest = array(
+            'LockCode' => Sms::$username,
+            'Key' => Sms::$password,
+            'Message' => $message,
+            'MobileNo' => $mobile,
         );
-        $context  = stream_context_create($options);
-        $str=file_get_contents($url, false, $context);
+        $fields_string = "";
+        foreach($postRequest as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+        rtrim($fields_string, '&');
+        $cURLConnection = curl_init($url);
+        curl_setopt($cURLConnection, CURLOPT_POST, 1);
+        curl_setopt($cURLConnection, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+
+        $str = curl_exec($cURLConnection);
+        curl_close($cURLConnection);
+
+// $apiResponse - available data from the API request
+        //$jsonArrayResponse = json_decode($apiResponse);
+// use key 'http' even if you send the request to https://...
+//        $options = array(
+//            'http' => array(
+//                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+//                'method'  => 'POST',
+//                'content' => http_build_query($data)
+//            )
+//        );
+//        $context  = stream_context_create($options);
+//        $str=file_get_contents($url, false, $context);
+//        $obj =json_decode(trim(str_replace("\\","",$str),'"'));
+//        $result=$obj->error;
         $obj =json_decode(trim(str_replace("\\","",$str),'"'));
         $result=$obj->error;
-
         if ($result == 0)///Success
         {
             return 200;

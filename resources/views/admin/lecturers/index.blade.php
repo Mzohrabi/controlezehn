@@ -42,14 +42,13 @@
                                 <tbody>
                                 @foreach($lecturers as $lecturer)
                                     <tr>
-                                        <td><input type="checkbox" value="{{$user->id}}" class="flat" name="table_records"></td>
-                                        <td>{{$lecturer->fname}}</td>
-                                        <td>{{$lecturer->lname}}</td>
-                                        <td>{{$lecturer->mobile}}</td>
+                                        <td><input type="checkbox" value="{{$lecturer->id}}" class="flat" name="table_records"></td>
+                                        <td>{{$lecturer->name}}</td>
+                                        <td>{{$lecturer->description}}</td>
                                         <td>{{$lecturer->jalali_date}}</td>
                                         <td>
-                                            <a href="{{route('admin.users.edit',$user->id)}}" class="btn btn-success">ویرایش</a>
-                                            <a href="#" class="btn btn-danger delete-record" data-delete-url="{{ route('admin.users.delete',$user->id) }}"
+                                            <a href="{{route('admin.lecturers.edit',$lecturer->id)}}" class="btn btn-success">ویرایش</a>
+                                            <a href="#" class="btn btn-danger delete-record" data-delete-url="{{ route('admin.lecturers.delete',$lecturer->id) }}"
                                                data-record-id="{{$lecturer->id}}">حذف</a>
 {{--                                            <a href="{{route('admin.users.delete',$user->id)}}" class="btn btn-danger">حذف</a>--}}
                                         </td>

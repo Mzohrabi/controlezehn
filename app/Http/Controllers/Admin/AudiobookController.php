@@ -47,7 +47,6 @@ class AudiobookController extends Controller
         }else{
             return redirect()->back();
         }
-
     }
 
     public function store(Request $request, AudioBook $audioBook, Product $product) {

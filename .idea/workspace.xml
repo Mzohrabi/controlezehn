@@ -20,22 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="temp commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LecturersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Lecturer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Utilities/Sms.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_08_034417_create_lecturers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LecturersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/13/pp.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AudioBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AudioBook.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AudiobookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_104349_create_lectures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_06_104349_create_lectures_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/audiobooks/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LecturersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LecturersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AudiobookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AudiobookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lecturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utilities/Sms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utilities/Sms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/lecturers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +45,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -284,6 +283,7 @@
       <workItem from="1594230620674" duration="5643000" />
       <workItem from="1594365474716" duration="581000" />
       <workItem from="1594486975526" duration="16000" />
+      <workItem from="1594518413112" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -394,20 +394,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -442,19 +441,23 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="705" y="355" width="555" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589306473740" />
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593610296584">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594494278576">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593610296584" />
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594494278575" />
     <state x="727" y="467" width="523" height="171" key="ComposerInitDialogKey" timestamp="1594129175922">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="727" y="467" width="523" height="171" key="ComposerInitDialogKey/67.27.1853.1053@67.27.1853.1053" timestamp="1594129175922" />
-    <state x="137" y="96" width="1159" height="602" key="DirDiffDialog" timestamp="1594317307233">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1594487813955">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594487813955" />
+    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog" timestamp="1594488058644">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="137" y="96" width="1159" height="602" key="DirDiffDialog/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594317307233" />
-    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1593608710815" />
+    <state x="167" y="125" width="1653" height="855" key="DirDiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594488058644" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594145934081">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -463,10 +466,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1589311541317" />
+    <state x="765" y="255" width="447" height="595" key="RollbackChangesDialog" timestamp="1594493349983">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="765" y="255" width="447" height="595" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594493349983" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594097883045">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1594097883045" />
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594493400032">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594493400032" />
     <state x="889" y="266" key="ftp.server.browser" timestamp="1593359170714">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

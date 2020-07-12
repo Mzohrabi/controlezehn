@@ -30,11 +30,11 @@ class AudioBook extends Model implements HasMedia
     }
 
     public function getSoundFileAttribute() {
-        return route('admin.products.audiobooks.sound', $this->id);
+        return route('api.products.audiobooks.sound', $this->id);
     }
 
     public function getSoundImageAttribute() {
-        return route('admin.products.audiobooks.image', $this->id);
+        return route('api.products.audiobooks.image', $this->id);
     }
 
 }

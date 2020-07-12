@@ -19,5 +19,10 @@
     <div class="col-md-6 col-sm-6 col-xs-12">
         {{Form::file('image', old('image'), ['id' => 'image', 'class'=> "form-control col-md-7 col-xs-12"])}}
     </div>
+    @if($info ?? '' != null)
+        @if(count($info->getMedia('lecturer_image')) > 0)
+            <img width="100" height="100" src="{{$info->getMedia('lecturer_image')->first()->getUrl()}}"/>
+        @endif
+    @endif
 </div>
 

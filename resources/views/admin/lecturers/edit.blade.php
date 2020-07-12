@@ -5,7 +5,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>ویرایش کاربر</h3>
+                    <h3>ویرایش سخنران</h3>
                 </div>
 
             </div>
@@ -34,13 +34,13 @@
                             <?php
 
                             ?>
-                            {{ Form::model($member, ['method'=>'post', 'files'=>'true', 'route'=>['admin.users.update',$member->id], 'id'=>'user_form', 'class'=>"form-horizontal form-label-left", 'data-parsley-validate'=>'']) }}
+                            {{ Form::model($info, ['method'=>'post', 'files'=>'true', 'route'=>['admin.lecturers.update',$info->id], 'id'=>'user_form', 'class'=>"form-horizontal form-label-left", 'data-parsley-validate'=>'']) }}
                                 @csrf
-                                @include('admin.users.form')
+                                @include('admin.lecturers.form')
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                        <a href="{{route('admin.users.all')}}" class="btn btn-primary">بازگشت</a>
+                                        <a href="{{route('admin.lecturers.all')}}" class="btn btn-primary">بازگشت</a>
                                         <button type="submit" class="btn btn-success">ویرایش</button>
                                     </div>
                                 </div>

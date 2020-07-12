@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Lecturer;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LecturersController extends Controller
 {
@@ -19,36 +20,16 @@ class LecturersController extends Controller
     }
 
     public function store(Request $request){
-        $lecturer = new Lecturer($request->except(['image','_token']));
-        $lecturer->save();
-
-        if($request->hasFile('image')){
-            $lecturer->addMediaFromRequest('image')->toMediaCollection('lecturer_image');
-        }
-
-
-        die(json_encode($_FILES));
-        $this->validate($request,
-            [
-                'fname' => 'required',
-                'lname' => 'required',
-                'mobile' => 'required|unique:users|digits_between:10,11',
-            ]
-        );
-
-        $userData = [
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-            'mobile' => $request->mobile,
-            'password' => bcrypt("test")
-        ];
-
         DB::beginTransaction();
         try{
-            $user = new User($userData);
-            $user->save();
+            $lecturer = new Lecturer($request->except(['image','_token']));
+            $lecturer->save();
+
+            if($request->hasFile('image')){
+                $lecturer->addMediaFromRequest('image')->toMediaCollection('lecturer_image','public_image');
+            }
             DB::commit();
-            flash('کاربر با موفقیت ثبت شد.')->success();
+            flash('سخنران با موفقیت ثبت شد.')->success();
             return redirect(route('admin.users.all'));
         }catch (\Exception $e){
             DB::rollBack();
@@ -59,8 +40,9 @@ class LecturersController extends Controller
     //
 
     public function edit($id){
-        $member = User::findOrFail($id);
-        return view('admin.lecturers.edit', compact('member'));
+        $info = Lecturer::findOrFail($id);
+
+        return view('admin.lecturers.edit', compact('info'));
     }
 
     public function update($id, Request $request){
