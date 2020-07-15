@@ -21,6 +21,10 @@ class Lecturer extends Model implements HasMedia
         return Jalalian::fromDateTime(new Carbon($this->created_at))->format("H:i:s y/m/d");
     }
 
+    public function lectures() {
+        return $this->hasMany('App\Lecture');
+    }
+
     public function getLecturerImageAttribute() {
         if(count($this->getMedia('lecturer_image')) > 0 ){
             return $this->getMedia('lecturer_image')->first()->getUrl();

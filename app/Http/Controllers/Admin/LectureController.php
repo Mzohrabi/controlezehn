@@ -2,10 +2,119 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\AudioBook;
+use App\DataTables\LectureDataTable;
 use App\Http\Controllers\Controller;
+use App\Lecture;
+use App\Lecturer;
+use App\Product;
+use App\Utilities\FormUtilities;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 class LectureController extends Controller
 {
-    //
+    public function index(LectureDataTable $dataTable) {
+        $lectures = Lecture::all();
+        return $dataTable->render('admin.products.lectures.index', compact('lectures'));
+    }
+
+    public function create() {
+        $lecturers = Lecturer::all();
+        $lecturer_array = FormUtilities::createSelectArray($lecturers, 'id', 'name');
+        return view('admin.products.lectures.create', compact('lecturer_array'));
+    }
+
+    public function edit($id) {
+        $info = AudioBook::findOrFail($id);
+        return view('admin.products.audiobooks.edit', compact('info'));
+    }
+
+    public function soundfile($id) {
+        $info = AudioBook::findOrFail($id);
+        $image = $info->getMedia('sound_file')->first();
+        if($image != null){
+            $response = Response::download($image->getPath(),$image->file_name);
+            return $response;
+        }else{
+            return redirect()->back();
+        }
+    }
+
+    public function imagefile($id) {
+        $info = AudioBook::findOrFail($id);
+        $image = $info->getMedia('sound_pics')->first();
+        if($image != null){
+            $response = Response::download($image->getPath(),$image->file_name);
+            return $response;
+        }else{
+            return redirect()->back();
+        }
+    }
+
+    public function store(Request $request, Lecture $lecture, Product $product) {
+        DB::beginTransaction();
+        try{
+            $lecture->description = $request->description;
+            if($request->hasFile('sound_pic')){
+                $lecture->addMediaFromRequest('sound_pic')->toMediaCollection('sound_pics');
+            }
+            if($request->hasFile('sound_file')){
+                $lecture->addMediaFromRequest('sound_file')->toMediaCollection('sound_file');
+            }
+            $lecture->brief_description = $request->description;
+            $lecture->lecturer_id = $request->lecturer;
+            $lecture->save();
+
+            $product->title = $request->title;
+            $product->price = $request->price;
+            $product->is_free = $request->is_free ?? 0;
+            $product->description = $request->description;
+            $product->rate = 0;
+            $product->productable()->associate($lecture);
+            $product->save();
+            DB::commit();
+            flash('سخنرانی با موفقیت ثبت شد.')->success();
+            return redirect(route('admin.products.audiobooks'));
+        }catch (\Exception $e){
+            die($e->getMessage());
+            DB::rollBack();
+            flash('خطایی هنگام ثبت اطلاعات رخ داده است.')->error();
+            return redirect()->back()->withInput($request->all());
+        }
+    }
+
+    public function update($id, Request $request, AudioBook $audioBook) {
+        $info = AudioBook::findOrFail($id);
+        DB::beginTransaction();
+        try{
+            $info->description = $request->description;
+            if($request->hasFile('sound_pic')){
+                $info->clearMediaCollection('sound_pics');
+                $info->addMediaFromRequest('sound_pic')->toMediaCollection('sound_pics');
+            }
+            if($request->hasFile('sound_file')){
+                $info->clearMediaCollection('sound_file');
+                $info->addMediaFromRequest('sound_file')->toMediaCollection('sound_file');
+            }
+            $info->image_url = "";
+            $info->sound_url = "";
+            $info->save();
+
+            $info->product->title = $request->title;
+            $info->product->price = $request->price;
+            $info->product->is_free = $request->is_free ?? 0;
+            $info->product->description = $request->description;
+            $info->product->save();
+            DB::commit();
+            flash('ویرایش فایل صوتی با موفقیت انجام شد.')->success();
+            return redirect(route('admin.products.audiobooks'));
+        }catch (\Exception $e){
+            //die($e->getMessage());
+            DB::rollBack();
+            flash('خطایی هنگام ثبت اطلاعات رخ داده است.')->error();
+            return redirect()->back()->withInput($request->all());
+        }
+    }
 }
