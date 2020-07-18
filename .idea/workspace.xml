@@ -20,26 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42cd39b-cfbf-434c-9ac1-56f0789d0f92" name="Default Changelist" comment="temp commit">
-      <change afterPath="$PROJECT_DIR$/app/DataTables/LectureDataTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/datatables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gentella/src/js/Persian.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/controlezehn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controlezehn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LectureController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update28.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/DataTables/LectureDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/LectureDataTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LectureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LectureController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Lecture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lecture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lecturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/lecturers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/lectures/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/lectures/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/lectures/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/lectures/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,22 +218,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/gentella/src/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/database/migrations/audio_books" />
-      <recent name="E:\learning\laravel\controlezehn\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/public/gentella/src/js" />
       <recent name="$PROJECT_DIR$/resources/views/admin/products" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="F:\learning\laravel\controlezehn\db" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/database/migrations/audio_books" />
+      <recent name="E:\learning\laravel\controlezehn\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -301,6 +291,9 @@
       <workItem from="1594486975526" duration="16000" />
       <workItem from="1594518413112" duration="1231000" />
       <workItem from="1594825805969" duration="16990000" />
+      <workItem from="1594845483153" duration="56000" />
+      <workItem from="1595049891121" duration="292000" />
+      <workItem from="1595057853248" duration="4397000" />
     </task>
     <task id="LOCAL-00001" summary="init Controle zehn">
       <created>1586185736346</created>
@@ -414,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594519011309</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="temp commit">
+      <created>1594845500349</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1594845500349</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,10 +498,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="765" y="255" width="447" height="595" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1594493349983" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594519080628">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595057881936">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1594519080628" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1595057881936" />
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594493400032">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

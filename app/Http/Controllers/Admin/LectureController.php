@@ -27,13 +27,15 @@ class LectureController extends Controller
     }
 
     public function edit($id) {
-        $info = AudioBook::findOrFail($id);
-        return view('admin.products.audiobooks.edit', compact('info'));
+        $info = Lecture::findOrFail($id);
+        $lecturers = Lecturer::all();
+        $lecturer_array = FormUtilities::createSelectArray($lecturers, 'id', 'name');
+        return view('admin.products.lectures.edit', compact('info','lecturer_array'));
     }
 
-    public function soundfile($id) {
-        $info = AudioBook::findOrFail($id);
-        $image = $info->getMedia('sound_file')->first();
+    public function lecturefile($id) {
+        $info = Lecture::findOrFail($id);
+        $image = $info->getMedia('lecture_file')->first();
         if($image != null){
             $response = Response::download($image->getPath(),$image->file_name);
             return $response;
@@ -43,8 +45,8 @@ class LectureController extends Controller
     }
 
     public function imagefile($id) {
-        $info = AudioBook::findOrFail($id);
-        $image = $info->getMedia('sound_pics')->first();
+        $info = Lecture::findOrFail($id);
+        $image = $info->getMedia('lecture_pics')->first();
         if($image != null){
             $response = Response::download($image->getPath(),$image->file_name);
             return $response;
@@ -56,15 +58,15 @@ class LectureController extends Controller
     public function store(Request $request, Lecture $lecture, Product $product) {
         DB::beginTransaction();
         try{
+            if($request->hasFile('lecture_pic')){
+                $lecture->addMediaFromRequest('lecture_pic')->toMediaCollection('lecture_pics');
+            }
+            if($request->hasFile('lecture_file')){
+                $lecture->addMediaFromRequest('lecture_file')->toMediaCollection('lecture_file');
+            }
             $lecture->description = $request->description;
-            if($request->hasFile('sound_pic')){
-                $lecture->addMediaFromRequest('sound_pic')->toMediaCollection('sound_pics');
-            }
-            if($request->hasFile('sound_file')){
-                $lecture->addMediaFromRequest('sound_file')->toMediaCollection('sound_file');
-            }
             $lecture->brief_description = $request->description;
-            $lecture->lecturer_id = $request->lecturer;
+            $lecture->lecturer_id = $request->lecturer_id;
             $lecture->save();
 
             $product->title = $request->title;
@@ -76,7 +78,7 @@ class LectureController extends Controller
             $product->save();
             DB::commit();
             flash('سخنرانی با موفقیت ثبت شد.')->success();
-            return redirect(route('admin.products.audiobooks'));
+            return redirect(route('admin.products.lectures'));
         }catch (\Exception $e){
             die($e->getMessage());
             DB::rollBack();
@@ -85,21 +87,22 @@ class LectureController extends Controller
         }
     }
 
-    public function update($id, Request $request, AudioBook $audioBook) {
-        $info = AudioBook::findOrFail($id);
+    public function update($id, Request $request) {
+        $info = Lecture::findOrFail($id);
         DB::beginTransaction();
         try{
             $info->description = $request->description;
-            if($request->hasFile('sound_pic')){
-                $info->clearMediaCollection('sound_pics');
-                $info->addMediaFromRequest('sound_pic')->toMediaCollection('sound_pics');
+            if($request->hasFile('lecture_pic')){
+                $info->clearMediaCollection('lecture_pics');
+                $info->addMediaFromRequest('lecture_pic')->toMediaCollection('lecture_pics');
             }
-            if($request->hasFile('sound_file')){
-                $info->clearMediaCollection('sound_file');
-                $info->addMediaFromRequest('sound_file')->toMediaCollection('sound_file');
+            if($request->hasFile('lecture_file')){
+                $info->clearMediaCollection('lecture_file');
+                $info->addMediaFromRequest('lecture_file')->toMediaCollection('lecture_file');
             }
-            $info->image_url = "";
-            $info->sound_url = "";
+            $info->description = $request->description;
+            $info->brief_description = $request->description;
+            $info->lecturer_id = $request->lecturer_id;
             $info->save();
 
             $info->product->title = $request->title;
@@ -108,10 +111,10 @@ class LectureController extends Controller
             $info->product->description = $request->description;
             $info->product->save();
             DB::commit();
-            flash('ویرایش فایل صوتی با موفقیت انجام شد.')->success();
-            return redirect(route('admin.products.audiobooks'));
+            flash('ویرایش سخنرانی با موفقیت انجام شد.')->success();
+            return redirect(route('admin.products.lectures'));
         }catch (\Exception $e){
-            //die($e->getMessage());
+            die($e->getMessage());
             DB::rollBack();
             flash('خطایی هنگام ثبت اطلاعات رخ داده است.')->error();
             return redirect()->back()->withInput($request->all());

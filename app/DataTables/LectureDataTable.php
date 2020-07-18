@@ -21,8 +21,8 @@ class LectureDataTable extends DataTable
                 return $lecture->jalali_date;
             })
             ->addColumn('action', function(Lecture $lecture) {
-                return '<a href="'.route('admin.users.edit',$lecture->id).'" class="btn btn-sm btn-success">ویرایش</a>
-                                            <a href="#" class="btn btn-sm btn-danger delete-record" data-delete-url="'.route('admin.users.delete',$lecture->id) .'"
+                return '<a href="'.route('admin.products.lectures.edit',$lecture->id).'" class="btn btn-sm btn-success">ویرایش</a>
+                                            <a href="#" class="btn btn-sm btn-danger delete-record" data-delete-url="'.route('admin.products.lectures',$lecture->id) .'"
                                                data-record-id="'.$lecture->id.'">حذف</a>';
             })
             ->filterColumn('persian_date',function($query, $keyword) {

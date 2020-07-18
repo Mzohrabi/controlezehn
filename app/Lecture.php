@@ -13,7 +13,7 @@ class Lecture extends Model implements HasMedia
     use HasMediaTrait;
     //
     protected $fillable = ['lecturer_id','file_url','description','brief_description', 'image_url'];
-    protected $appends = ['file', 'sound_image'];
+    protected $appends = ['file', 'lecture_image'];
 
     public function product(){
         return $this->morphOne('App\Product', 'productable',null,null);
@@ -29,11 +29,11 @@ class Lecture extends Model implements HasMedia
     }
 
     public function getFileAttribute() {
-        return route('api.products.audiobooks.sound', $this->id);
+        return route('api.products.lectures.file', $this->id);
     }
 
-    public function getSoundImageAttribute() {
-        return route('api.products.audiobooks.image', $this->id);
+    public function getLectureImageAttribute() {
+        return route('api.products.lectures.image', $this->id);
     }
 
 }

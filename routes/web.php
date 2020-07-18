@@ -70,7 +70,7 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
             Route::get('/create', "LectureController@create")->name('admin.products.lectures.create');
             Route::post('/store', "LectureController@store")->name('admin.products.lectures.store');
             Route::get('/{id}/edit', "LectureController@edit")->name('admin.products.lectures.edit');
-            Route::get('/{id}/soundfile', "LectureController@soundfile")->name('admin.products.lectures.sound');
+            Route::get('/{id}/lecturefile', "LectureController@lecturefile")->name('admin.products.lectures.lecturefile');
             Route::get('/{id}/imagefile', "LectureController@imagefile")->name('admin.products.lectures.image');
             Route::post('/{id}/update', "LectureController@update")->name('admin.products.lectures.update');
             Route::post('/{id}/delete', "LectureController@delete")->name('admin.products.lectures.delete');

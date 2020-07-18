@@ -9,7 +9,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>اضافه کردن کتاب صوتی جدید</h3>
+                    <h3>اضافه کردن سخنرانی جدید</h3>
                 </div>
 
             </div>
@@ -26,7 +26,7 @@
                     @include('flash::message')
                     <div class="x_panel">
                         {{--                        <form id="demo-form2" method="post" action="{{route('admin.users.store')}}" data-parsley-validate class="form-horizontal form-label-left">--}}
-                        {{Form::model($info,['route' => ['admin.products.audiobooks.update', $info->id], 'files'=>'true', 'method' => 'post', 'class'=>"form-horizontal form-label-left", 'data-parsley-validate'=>''])}}
+                        {{Form::model($info,['route' => ['admin.products.lectures.update', $info->id], 'files'=>'true', 'method' => 'post', 'class'=>"form-horizontal form-label-left", 'data-parsley-validate'=>''])}}
                         @csrf
                         <div class="" role="tabpanel" data-example-id="togglable-tabs">
                             <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
@@ -35,7 +35,7 @@
                                                                           aria-expanded="true">اطلاعات کلی</a>
                                 </li>
                                 <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab"
-                                                                    data-toggle="tab" aria-expanded="false">جزئیات کتاب صوتی</a>
+                                                                    data-toggle="tab" aria-expanded="false">جزئیات سخنرانی</a>
                                 </li>
                                 {{--                                <li role="presentation" class=""><a href="#tab_content3" role="tab"--}}
                                 {{--                                                                    id="profile-tab2" data-toggle="tab"--}}
@@ -56,7 +56,7 @@
                                      aria-labelledby="profile-tab">
 
                                     <!-- start user projects -->
-                                @include('admin.products.audiobooks.form')
+                                @include('admin.products.lectures.form')
                                 <!-- end user projects -->
                                     <button type="submit" class="btn btn-success" >ثبت اطلاعات</button>
                                 </div>
