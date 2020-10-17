@@ -20,6 +20,10 @@ class LoginController extends Controller
     }
     public function login(Request $request){
         $credentials = $request->only('mobile', 'password');
+//        $user = User::findOrFail(1);
+//        $user->password = bcrypt('123456');
+//        $user->save();
+//        die(json_encode($user));
         if(Auth::guard('web')->attempt($credentials)){
             return redirect(route('admin.dashboard'));
         }else{

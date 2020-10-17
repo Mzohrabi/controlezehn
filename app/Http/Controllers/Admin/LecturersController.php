@@ -2,23 +2,36 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DataTables\LecturerDataTable;
 use App\Http\Controllers\Controller;
 use App\Lecturer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 class LecturersController extends Controller
 {
-    public function index(){
+    public function index(LecturerDataTable $dataTable){
         $lecturers = Lecturer::all();
-        return view('admin.lecturers.index',compact('lecturers'));
+        return $dataTable->render('admin.lecturers.index', compact('lecturers'));
+        //return view('admin.lecturers.index',compact('lecturers'));
     }
 
     public function create(){
         return view('admin.lecturers.create');
     }
 
+    public function imagefile($id) {
+        $info = Lecturer::findOrFail($id);
+        $image = $info->getMedia('lecturer_image')->first();
+        if($image != null){
+            $response = Response::download($image->getPath(),$image->file_name);
+            return $response;
+        }else{
+            return redirect()->back();
+        }
+    }
     public function store(Request $request){
         DB::beginTransaction();
         try{
@@ -30,7 +43,7 @@ class LecturersController extends Controller
             }
             DB::commit();
             flash('سخنران با موفقیت ثبت شد.')->success();
-            return redirect(route('admin.users.all'));
+            return redirect(route('admin.lecturers.all'));
         }catch (\Exception $e){
             DB::rollBack();
             flash('خطایی هنگام ثبت اطلاعات رخ داده است.')->error();
@@ -46,14 +59,18 @@ class LecturersController extends Controller
     }
 
     public function update($id, Request $request){
-        $user = User::findOrFail($id);
-        $user->update($request->all());
+        $lecturer = Lecturer::findOrFail($id);
+        $lecturer->update($request->all());
+        if($request->hasFile('image')){
+            $lecturer->clearMediaCollection('lecturer_image');
+            $lecturer->addMediaFromRequest('image')->toMediaCollection('lecturer_image','public_image');
+        }
         flash('ویرایش کاربر با موفقیت انجام شد.')->success();
         return redirect(route('admin.lecturers.all'));
     }
 
     public function delete($id){
-        $user = User::findOrFail($id);
+        $user = Lecturer::findOrFail($id);
         $user->delete();
         return back();
     }

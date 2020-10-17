@@ -40,6 +40,7 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
         Route::get('/{id}/edit', "LecturersController@edit")->name('admin.lecturers.edit');
         Route::get('/{id}/show', "LecturersController@show")->name('admin.lecturers.show');
         Route::post('/{id}/update', "LecturersController@update")->name('admin.lecturers.update');
+        Route::get('/{id}/imagefile', "LecturersController@imagefile")->name('admin.lecturers.image');
         Route::post('/{id}/delete', "LecturersController@delete")->name('admin.lecturers.delete');
     });
 
@@ -57,7 +58,7 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
             Route::get('/{id}/soundfile', "AudiobookController@soundfile")->name('admin.products.audiobooks.sound');
             Route::get('/{id}/imagefile', "AudiobookController@imagefile")->name('admin.products.audiobooks.image');
             Route::post('/{id}/update', "AudiobookController@update")->name('admin.products.audiobooks.update');
-            Route::post('/{id}/delete', "AudiobookController@delete")->name('admin.products.audiobooks.delete');
+            Route::get('/{id}/delete', "AudiobookController@delete")->name('admin.products.audiobooks.delete');
         });
 
         Route::prefix("courses")->group(function(){

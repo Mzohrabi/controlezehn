@@ -120,4 +120,10 @@ class LectureController extends Controller
             return redirect()->back()->withInput($request->all());
         }
     }
+
+    public function delete($id){
+        $user = Lecture::findOrFail($id);
+        $user->delete();
+        return back();
+    }
 }

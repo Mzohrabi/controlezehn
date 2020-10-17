@@ -113,5 +113,11 @@ class AudiobookController extends Controller
             return redirect()->back()->withInput($request->all());
         }
     }
+
+    public function delete($id){
+        $user = AudioBook::findOrFail($id);
+        $user->delete();
+        return back();
+    }
     //
 }

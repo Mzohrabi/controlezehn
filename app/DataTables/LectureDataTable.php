@@ -22,7 +22,7 @@ class LectureDataTable extends DataTable
             })
             ->addColumn('action', function(Lecture $lecture) {
                 return '<a href="'.route('admin.products.lectures.edit',$lecture->id).'" class="btn btn-sm btn-success">ویرایش</a>
-                                            <a href="#" class="btn btn-sm btn-danger delete-record" data-delete-url="'.route('admin.products.lectures',$lecture->id) .'"
+                                            <a href="#" class="btn btn-sm btn-danger delete-record" data-delete-url="'.route('admin.products.lectures.delete',$lecture->id) .'"
                                                data-record-id="'.$lecture->id.'">حذف</a>';
             })
             ->filterColumn('persian_date',function($query, $keyword) {

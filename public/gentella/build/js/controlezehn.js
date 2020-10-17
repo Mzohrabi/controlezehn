@@ -238,7 +238,7 @@ var controlezehn = (function ($) {
         /* Member delete sweetalert
         /* --------------------------------- */
         deleterecord: function () {
-            $('.delete-record').click(function () {
+            $(document).on('click','.delete-record', function () {
                 var recordId = $(this).attr("data-record-id");
                 var deleteUrl = $(this).attr("data-delete-url");
 
