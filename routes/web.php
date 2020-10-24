@@ -62,8 +62,14 @@ Route::namespace("Admin")->prefix("admin")->group(function(){
         });
 
         Route::prefix("courses")->group(function(){
-            Route::get('/all', "UserController@index")->name('admin.products.courses');
-
+            Route::get('/all', "CourseController@index")->name('admin.products.courses');
+            Route::get('/create', "CourseController@create")->name('admin.products.courses.create');
+            Route::post('/store', "CourseController@store")->name('admin.products.courses.store');
+            Route::get('/{id}/edit', "CourseController@edit")->name('admin.products.courses.edit');
+            Route::get('/{id}/soundfile', "CourseController@soundfile")->name('admin.products.courses.sound');
+            Route::get('/{id}/imagefile', "CourseController@imagefile")->name('admin.products.courses.image');
+            Route::post('/{id}/update', "CourseController@update")->name('admin.products.courses.update');
+            Route::get('/{id}/delete', "CourseController@delete")->name('admin.products.courses.delete');
         });
 
         Route::prefix("lectures")->group(function(){
